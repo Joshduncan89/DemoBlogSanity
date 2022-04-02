@@ -5,6 +5,7 @@ import { sanityClient, urlFor } from '../../sanity'
 import { Post } from '../../typings'
 import PortableText from 'react-portable-text'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import Footer from '../../components/Footer'
 
 interface Props {
   post: Post
@@ -18,7 +19,6 @@ interface FormInput {
 }
 
 const Post = ({ post }: Props) => {
-  console.log(post)
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
@@ -31,8 +31,7 @@ const Post = ({ post }: Props) => {
       method: 'POST',
       body: JSON.stringify(data),
     })
-      .then((data) => {
-        console.log(data)
+      .then(() => {
         setSubmitted(true)
       })
       .catch((err) => {
@@ -159,6 +158,7 @@ const Post = ({ post }: Props) => {
           ))
         )}
       </div>
+      <Footer />
     </main>
   )
 }

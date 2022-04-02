@@ -3,9 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { sanityClient, urlFor } from '../sanity'
 import Center from '../components/Center'
-import Header from '../components/Header'
+
 import { Post } from '../typings'
 import Link from 'next/link'
+import Dropdown from '../components/Dropdown'
+import Footer from '../components/Footer'
 
 interface Props {
   posts: [Post]
@@ -13,19 +15,20 @@ interface Props {
 
 const Home = ({ posts }: Props) => {
   return (
-    <div>
+    <div className="w-screen">
       <Head>
-        <title>Medium 2.0 Blog</title>
+        <title>Earth</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+
       <Center />
+
       <div className="grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3">
         {posts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
-            <div className="group w-full cursor-pointer overflow-hidden border-2 ">
+            <div className="group w-full cursor-pointer overflow-hidden rounded-md border-2 ">
               <img
-                className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
+                className="h-48 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
                 src={urlFor(post.mainImage).url()!}
                 alt=""
               />
@@ -44,6 +47,8 @@ const Home = ({ posts }: Props) => {
           </Link>
         ))}
       </div>
+
+      <Footer />
     </div>
   )
 }

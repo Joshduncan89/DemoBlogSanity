@@ -1,22 +1,25 @@
 import React from 'react'
+import Header from './Header'
 
 const Center = () => {
   return (
-    <div className="mx-auto flex max-w-7xl items-center justify-between border-y border-black bg-yellow-400 py-10 lg:py-0">
-      <div className="space-y-5 px-10">
-        <h1 className="max-w-xl font-serif text-6xl">
-          <span className="underline decoration-4">Medium</span> is a place to
-          write, read and connect
-        </h1>
-        <h2>
-          Its easy and free to post your thinking on any topic and connect with
-          other readers
-        </h2>
+    <div className=" bg-[url('/earth1.webp')]">
+      <Header />
+      <div className="mx-auto flex h-80 max-w-7xl items-center justify-center border-y border-black  py-10 lg:py-0">
+        <div className=" my-5 space-y-5 rounded-md px-10 pb-5 text-white">
+          <h1 className="max-w-xl p-5 font-serif text-5xl underline decoration-4">
+            EarthNews
+          </h1>
+          <h2 className="max-w-xl px-5 font-serif text-sm md:text-lg xl:text-xl">
+            Connecting you with others to help share the stories your twitter
+            fame depends on
+          </h2>
+          {/* <h2 className="hidden max-w-xl font-serif md:inline-block md:text-sm">
+            Something happening in your part of the Globe? Share it with others,
+            because misery loves company
+          </h2> */}
+        </div>
       </div>
-      <img
-        className="hidden h-32 md:inline-flex lg:h-full"
-        src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png"
-      />
     </div>
   )
 }
