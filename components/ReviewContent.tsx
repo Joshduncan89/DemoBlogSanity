@@ -18,7 +18,7 @@ const ReviewContent: React.FC<BlogInput> = ({
   _createdAt,
 }: BlogInput) => {
   const { data: session } = useSession()
-  console.log(session)
+
   return (
     <div className="  bg-white sm:mx-auto sm:max-w-2xl sm:scale-90">
       <img src={mainImage} className="mt-3 h-40 w-full object-cover" />
@@ -26,7 +26,6 @@ const ReviewContent: React.FC<BlogInput> = ({
         <h1 className="mt-10 mb-3 text-3xl">{title}</h1>
         <h2 className="mb-2 text-xl font-light">{description}</h2>
         <div className="mt-3 flex items-center space-x-4">
-          <img className="h-12 w-12 rounded-full" src={session?.user?.image} />
           <p className="text-xs">
             Blog content by {author} - Published at{' '}
             {new Date(_createdAt).toLocaleString()}
