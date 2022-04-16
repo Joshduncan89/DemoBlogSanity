@@ -9,10 +9,8 @@ const SubmitModalPage = () => {
   const [open, setOpen] = useRecoilState(showSubmitModal)
 
   const cancelPost = () => {
-    router.push('/')
-  }
-  const continuePost = () => {
     setOpen(false)
+    router.push('/')
   }
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -55,11 +53,11 @@ const SubmitModalPage = () => {
                 as="h3"
                 className="text-lg font-medium leading-6 text-gray-900"
               >
-                Ready to submit?
+                Submitted!
               </Dialog.Title>
               <div className="mt-2">
-                <p className="text-sm text-gray-500">
-                  Your post will be published
+                <p className="text-xs text-gray-500">
+                  All blogs are subject to review before appearing publicly
                 </p>
               </div>
 
@@ -69,14 +67,7 @@ const SubmitModalPage = () => {
                   className=" rounded-md border border-transparent bg-red-300 px-4 py-2 text-sm font-medium text-white hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   onClick={cancelPost}
                 >
-                  Submit
-                </button>
-                <button
-                  type="button"
-                  className=" rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                  onClick={continuePost}
-                >
-                  Not yet
+                  Okay
                 </button>
               </div>
             </div>

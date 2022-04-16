@@ -7,10 +7,10 @@ function Header() {
   const { data: session } = useSession()
 
   return (
-    <header className="mx-auto flex max-w-7xl justify-between bg-slate-300 p-5">
+    <header className="mx-auto flex max-w-7xl justify-between bg-sky-900 p-5 shadow-md shadow-slate-400">
       <div className="flex items-center space-x-5">
         <Link href={'/'}>
-          <div className="cursor-pointers flex h-10 w-[110px] items-center justify-center rounded-full bg-slate-400">
+          <div className="cursor-pointers flex h-10 w-[110px] items-center justify-center rounded-full bg-gradient-to-br from-slate-300 to-cyan-800">
             <h1 className="cursor-pointer text-xl font-semibold ">EarthNews</h1>
           </div>
         </Link>
@@ -23,7 +23,7 @@ function Header() {
           </h3>
         </div>
       </div>
-      <div className="flex items-center space-x-5 text-black">
+      <div className="flex items-center space-x-5 text-teal-400">
         {session ? (
           <h3>
             <Dropdownbar />

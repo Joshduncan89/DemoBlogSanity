@@ -1,6 +1,6 @@
 import { useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, LogoutIcon } from '@heroicons/react/solid'
 import { ChevronDoubleUpIcon } from '@heroicons/react/solid'
 import { LightningBoltIcon } from '@heroicons/react/solid'
 import { DocumentAddIcon } from '@heroicons/react/solid'
@@ -27,8 +27,8 @@ const Dropdownbar = () => {
   return (
     <Menu as="div" className="relative inline-block pr-4 text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-black hover:bg-opacity-30  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-          {session?.user?.name}
+        <Menu.Button className="inline-flex w-full justify-center rounded-lg border border-slate-500 bg-slate-200 bg-opacity-20 px-4 py-2 text-sm font-medium text-teal-300 hover:bg-opacity-30  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          {session?.user?.name?.split(' ').join('')}
           <ChevronDownIcon
             className="ml-2 -mr-1 h-5 w-5 text-black "
             aria-hidden="true"
@@ -139,9 +139,9 @@ const Dropdownbar = () => {
                   } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                 >
                   {active ? (
-                    <CogIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                    <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
                   ) : (
-                    <CogIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                    <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
                   )}
                   Logout
                 </button>

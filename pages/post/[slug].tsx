@@ -144,6 +144,8 @@ const Post = ({ post }: Props) => {
         </form>
       )}
 
+      {/* COMMENTS */}
+
       <div className="mx-auto my-8 flex max-w-lg flex-col space-y-2 p-10 shadow shadow-gray-400">
         <h3 className="text-4xl font-semibold">Comments</h3>
         <hr />
