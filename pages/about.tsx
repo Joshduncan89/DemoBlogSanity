@@ -12,8 +12,8 @@ const About = () => {
             EarthNews is not a real website to get your actual news. Although
             some of the stories dont seem far fetched from where out society may
             be heading, Bezos Bots <span className="italic">probably</span> wont
-            be available for awhile. Im an aspiring developer who used the
-            satire as a quick model to learn some new APIs.{' '}
+            be available for awhile. This was created solely as satire as a
+            quick model to learn some new APIs.{' '}
           </p>
         </div>
       </div>
