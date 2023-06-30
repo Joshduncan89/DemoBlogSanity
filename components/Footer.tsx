@@ -3,7 +3,7 @@ import Icons from './Icons'
 
 const Footer = () => {
   return (
-    <div className="w-full rounded-t-md bg-sky-900 font-semibold text-black">
+    <div className="w-full rounded-t-md bg-sky-900 font-semibold text-white">
       <div className="flex flex-col  bg-sky-900 pt-3 ">
         <div className="flex justify-evenly">
           <div className="flex flex-col items-center space-y-1 p-6">
@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
       <hr className=" mx-auto max-w-xl" />
       <div className=" flex justify-center p-4">
-        <p>© 2022 EarthNews Inc. All rights reserved</p>
+        <p>© 2021 EarthNews Inc. All rights reserved</p>
       </div>
     </div>
   )
