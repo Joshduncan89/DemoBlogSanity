@@ -2,34 +2,36 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import React from 'react'
 import Dropdownbar from './Dropdown'
+import { GlobeAmericasIcon } from '@heroicons/react/24/outline'
 
 function Header() {
   const { data: session } = useSession()
 
   return (
-    <header className="mx-auto flex justify-between bg-sky-900 p-2 shadow-md shadow-slate-400">
+    <header className="mx-auto flex justify-between bg-black p-2 text-slate-200 shadow-md shadow-slate-400 md:justify-between">
       <Link href={'/'}>
-        <div className="cursor-pointers flex h-10 w-[130px] items-center justify-center rounded-full bg-gradient-to-br from-slate-300 to-cyan-800 px-8">
-          <h1 className="cursor-pointer text-xl font-semibold text-white">
-            EarthNews
-          </h1>
+        <div className="flex cursor-pointer items-center justify-center px-8">
+          <GlobeAmericasIcon
+            className="h-8 w-8"
+            fill="#e2e8f0"
+            stroke="black"
+          />
         </div>
       </Link>
-      <div className="lg:text-md flex w-full items-center justify-end space-x-12 text-xs md:mr-8">
-        <div className="hidden items-center justify-evenly space-x-2 font-bold md:inline-flex md:space-x-12">
-          <Link href={'/about'}>
-            <h3>About</h3>
+
+      <div className="md:text-md mr-4 inline-flex items-center justify-evenly space-x-4 text-xs font-bold md:mr-12 md:space-x-12 md:tracking-widest">
+        <Link href={'/about'}>
+          <h3>About</h3>
+        </Link>
+        {session ? (
+          <h3>
+            <Dropdownbar />
+          </h3>
+        ) : (
+          <Link href={'/auth/signin'} className="hidden md:inline-block">
+            <h3 className="cursor-pointer font-bold">Sign In</h3>
           </Link>
-          {session ? (
-            <h3>
-              <Dropdownbar />
-            </h3>
-          ) : (
-            <Link href={'/auth/signin'}>
-              <h3 className="cursor-pointer font-bold">Sign In</h3>
-            </Link>
-          )}
-        </div>
+        )}
       </div>
     </header>
   )

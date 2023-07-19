@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <div className="flex bg-slate-100">
+      <div className="flex h-screen w-screen bg-slate-100">
         <div className="mx-auto flex max-w-xl flex-col items-center space-y-7 p-5">
           <h3 className="my-5 text-3xl font-semibold">About Us</h3>
           <p>

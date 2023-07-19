@@ -3,8 +3,8 @@ import Icons from './Icons'
 
 const Footer = () => {
   return (
-    <div className="w-full rounded-t-md bg-sky-900 font-semibold text-white">
-      <div className="flex flex-col  bg-sky-900 pt-3 ">
+    <div className="w-full rounded-t-md bg-black font-semibold text-white">
+      <div className="flex flex-col  bg-black pt-3 ">
         <div className="flex justify-evenly">
           <div className="flex flex-col items-center space-y-1 p-6">
             <h1 className=" text-slate-400">FOLLOW</h1>

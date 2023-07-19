@@ -48,7 +48,7 @@ const Post = ({ post }: Props) => {
         className="h-60 w-full object-cover"
       />
       <article className="mx-auto max-w-3xl p-5">
-        <h1 className="mt-10 mb-3 text-3xl">{post.title}</h1>
+        <h1 className="mb-3 mt-10 text-3xl">{post.title}</h1>
         <h2 className="mb-2 text-xl font-light">{post.description}</h2>
         <div className="mt-3 flex items-center space-x-4">
           <img
@@ -109,7 +109,7 @@ const Post = ({ post }: Props) => {
             <span>Name</span>
             <input
               {...register('name', { required: true })}
-              className="mt-1 block w-full border py-2 px-3 shadow ring-blue-400 focus:ring-2"
+              className="mt-1 block w-full border px-3 py-2 shadow ring-blue-400 focus:ring-2"
               type="text"
               placeholder="My Name Jeff"
             />
@@ -118,7 +118,7 @@ const Post = ({ post }: Props) => {
             <span>Email</span>
             <input
               {...register('email', { required: true })}
-              className="mt-1 block w-full border py-2 px-3 shadow ring-blue-400 focus:ring-2"
+              className="mt-1 block w-full border px-3 py-2 shadow ring-blue-400 focus:ring-2"
               type="text"
               placeholder="Email@email.com"
             />
@@ -127,7 +127,7 @@ const Post = ({ post }: Props) => {
             <span>Comment</span>
             <textarea
               {...register('comment', { required: true, maxLength: 250 })}
-              className="mt-1 block w-full border py-2 px-3 shadow ring-blue-400 focus:ring-2"
+              className="mt-1 block w-full border px-3 py-2 shadow ring-blue-400 focus:ring-2"
               rows={4}
               placeholder="Leave a comment..."
             />
