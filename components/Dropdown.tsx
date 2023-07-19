@@ -1,10 +1,10 @@
 import { useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon, LogoutIcon } from '@heroicons/react/solid'
-import { ChevronDoubleUpIcon } from '@heroicons/react/solid'
-import { LightningBoltIcon } from '@heroicons/react/solid'
-import { DocumentAddIcon } from '@heroicons/react/solid'
-import { CogIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { ChevronDoubleUpIcon } from '@heroicons/react/24/solid'
+// import { LightningBoltIcon } from '@heroicons/react/24/solid'
+// import { DocumentAddIcon } from '@heroicons/react/24/solid'
+import { CogIcon } from '@heroicons/react/24/solid'
 import { signOut, useSession } from 'next-auth/react'
 
 const Dropdownbar = () => {
@@ -30,7 +30,7 @@ const Dropdownbar = () => {
         <Menu.Button className="inline-flex w-full justify-center rounded-lg border border-slate-500 bg-slate-200 bg-opacity-20 px-4 py-2 text-sm font-medium text-teal-300 hover:bg-opacity-30  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           {session?.user?.name?.split(' ').join('')}
           <ChevronDownIcon
-            className="ml-2 -mr-1 h-5 w-5 text-black "
+            className="-mr-1 ml-2 h-5 w-5 text-black "
             aria-hidden="true"
           />
         </Menu.Button>
@@ -68,7 +68,7 @@ const Dropdownbar = () => {
                 </button>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
                   className={`${
@@ -89,8 +89,8 @@ const Dropdownbar = () => {
                   New
                 </a>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </Menu.Item> */}
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
                   className={`${
@@ -112,7 +112,7 @@ const Dropdownbar = () => {
                   Contribute
                 </a>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -130,7 +130,7 @@ const Dropdownbar = () => {
                 </button>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <button
                   onClick={logout}
@@ -146,7 +146,7 @@ const Dropdownbar = () => {
                   Logout
                 </button>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
           </div>
           <div className="px-1 py-1"></div>
         </Menu.Items>
