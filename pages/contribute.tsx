@@ -1,4 +1,4 @@
-import { CameraIcon, XCircleIcon } from '@heroicons/react/solid'
+import { CameraIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import { BaseSyntheticEvent, useRef, useState, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { showCancelModal, showSubmitModal } from '../atoms/ModalAtom'
@@ -116,13 +116,13 @@ const Contribute: React.FC = () => {
               <button
                 type="button"
                 onClick={submitForm}
-                className="w-32 rounded bg-blue-400 py-2 px-4 font-bold text-white hover:bg-blue-500"
+                className="w-32 rounded bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-500"
               >
                 Submit
               </button>
               <button
                 type="button"
-                className="w-32 rounded bg-red-300 py-2 px-4 font-bold text-white hover:bg-red-400"
+                className="w-32 rounded bg-red-300 px-4 py-2 font-bold text-white hover:bg-red-400"
                 onClick={() => setReview(false)}
               >
                 Go Back
@@ -138,13 +138,13 @@ const Contribute: React.FC = () => {
             </div>
             <form
               onSubmit={handleSubmit(reviewPost)}
-              className="my-10 mx-auto flex w-full max-w-3xl flex-col justify-center space-y-6"
+              className="mx-auto my-10 flex w-full max-w-3xl flex-col justify-center space-y-6"
             >
               <label className=" block">
                 <span className="my-2 block">Author</span>
                 <input
                   {...(register('author'), { required: true })}
-                  className="block w-full max-w-2xl border py-2 px-3 shadow-md"
+                  className="block w-full max-w-2xl border px-3 py-2 shadow-md"
                   type="text"
                   placeholder="Title"
                   name="author"
@@ -155,7 +155,7 @@ const Contribute: React.FC = () => {
                 <span className="my-2 block">Title</span>
                 <input
                   {...(register('title'), { required: true })}
-                  className="block w-full max-w-2xl border py-2 px-3 shadow-md"
+                  className="block w-full max-w-2xl border px-3 py-2 shadow-md"
                   type="text"
                   placeholder="Title"
                   name="title"
@@ -166,7 +166,7 @@ const Contribute: React.FC = () => {
                 <span className="my-2 block">Description</span>
                 <input
                   {...(register('description'), { required: true })}
-                  className="block w-full max-w-2xl border py-2 px-3 shadow-md"
+                  className="block w-full max-w-2xl border px-3 py-2 shadow-md"
                   type="text"
                   placeholder="Description"
                   name="description"
@@ -177,7 +177,7 @@ const Contribute: React.FC = () => {
                 <span className="my-2 block">Body</span>
                 <textarea
                   {...(register('body'), { required: true, minLength: 40 })}
-                  className="block w-full max-w-2xl border py-2 px-3 shadow-md"
+                  className="block w-full max-w-2xl border px-3 py-2 shadow-md"
                   rows={8}
                   placeholder="Create your story..."
                   name="body"
@@ -228,13 +228,13 @@ const Contribute: React.FC = () => {
               <div className="flex space-x-6 pb-3">
                 <button
                   type="submit"
-                  className="w-32 rounded bg-blue-400 py-2 px-4 font-bold text-white hover:bg-blue-500"
+                  className="w-32 rounded bg-blue-400 px-4 py-2 font-bold text-white hover:bg-blue-500"
                 >
                   Review
                 </button>
                 <button
                   type="button"
-                  className="w-32 rounded bg-red-300 py-2 px-4 font-bold text-white hover:bg-red-400"
+                  className="w-32 rounded bg-red-300 px-4 py-2 font-bold text-white hover:bg-red-400"
                   onClick={() => setCancelOpen(true)}
                 >
                   Cancel
